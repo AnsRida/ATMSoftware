@@ -1,0 +1,75 @@
+# Welcome window
+print("------------------------------------------------------------------------------------------")
+print("\t\t\t\tWELCOME\n\t\t\t-To Your Trusted Bank Of India-")
+print("------------------------------------------------------------------------------------------")
+print("\n")
+# Starting menu
+print("Please Insert Your Card")
+print("Card inserted successfully.")
+print("__________________________________________________________________________________________")
+# Authentication pin
+password = 1234
+pin = int(input("ENTER 4 DIGIT PIN : "))
+
+def info():
+     # Account Info
+                name = 'Rida Ansari'
+                acc_no = 'XXXXXXX5384'
+                branch = 'Thane'
+                print("NAME : ",name)
+                print("ACCOUNT NO. : ",acc_no)
+                print("BRANCH : ",branch)
+def bal():
+    balance = 50000
+    print(f"Your account Balance is :{balance}")
+def withdraw() :
+    balance = 50000
+    withdrawal_amount = int(input("Please enter the withdrawal amount : " ))
+    balance = balance - withdrawal_amount
+    print(f"Your current balance is :{balance}")
+def deposit() :
+    balance = 50000
+    deposit_amount =  int(input("Please enter the deposit amount : " ))
+    balance = balance + deposit_amount
+    print(f"Your current balance is :{balance}")
+def change():
+    new_pin = int(input("Please enter new PIN : "))
+    
+    if new_pin == pin :
+      print("Invalid PIN !!")
+      print("Please enter again.")
+    else : 
+      print("YOUR ATM CARD PIN IS CHANGED SUCCESSFULLY.")
+    pin == new_pin
+print("\n")
+if pin == password :
+            while True :
+                print("SELECT ANY ONE OPTION :")
+                print("---------------------")
+                print("1) Account Information\n2) Balance\n3) Withdraw\n4) Deposit\n5) Change Pin\n6) Cancel")
+
+                try :
+                    choice = int(input("Please enter the valid option : "))
+                except :
+                    print("Please enter valid option .")
+                if choice == 1 :
+                     info()  
+                if choice == 2 :
+                     bal()
+                if choice == 3 :
+                     withdraw()
+                if choice == 4 :
+                     deposit()
+                if choice == 5 :
+                     change()
+                if choice == 6 :
+                     print("Please Remove Your Card")
+                     break
+                               
+                print("\n") 
+                print("\t\t\tThank You")
+                print("\n")   
+
+else :
+    print("INVALID PIN!!\nPlease enter correct pin")
+    
